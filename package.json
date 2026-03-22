@@ -1,0 +1,32 @@
+{
+  "name": "automationmcp",
+  "version": "1.0.0",
+  "description": "Sauce Demo - QA Automation Framework with Page Object Model",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:watch": "playwright test --watch",
+    "test:report": "playwright show-report",
+    "test:login": "playwright test test/login.spec.js",
+    "test:products": "playwright test test/products.spec.js",
+    "test:cart": "playwright test test/cart.spec.js",
+    "test:checkout": "playwright test test/checkout.spec.js",
+    "test:verbose": "playwright test --reporter=verbose"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "page-object-model"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0"
+  }
+}
