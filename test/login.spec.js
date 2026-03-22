@@ -106,10 +106,6 @@ test.describe('🔐 LOGIN SCENARIOS', () => {
   });
 
   test('TC-10: Invalid login - both fields empty', async ({ page }) => {
-    // Arrange
-    // Both fields left empty
-
-    // Act
     await loginPage.clickLogin();
 
     // Assert
