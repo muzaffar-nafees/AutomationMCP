@@ -48,13 +48,8 @@ test.describe('🔐 LOGIN SCENARIOS', () => {
 
 
   test('TC-06: Invalid login - locked_out_user', async ({ page }) => {
-    // Arrange
     const user = TEST_USERS.LOCKED_OUT_USER;
-
-    // Act
     await loginPage.login(user.username, user.password);
-
-    // Assert
     expect(await loginPage.isErrorDisplayed()).toBe(true);
     const errorText = await loginPage.getErrorMessageText();
     expect(errorText).toContain(EXPECTED_MESSAGES.LOCKED_OUT_ERROR);
@@ -62,7 +57,6 @@ test.describe('🔐 LOGIN SCENARIOS', () => {
   });
 
   test('TC-07: Invalid login - wrong password', async ({ page }) => {
-    // Arrange
     const user = TEST_USERS.STANDARD_USER;
 
     // Act
